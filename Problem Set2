@@ -1,0 +1,117 @@
+
+Prob 1:
+
+Write a program which takes two values x and y. Prints x for y number of times.
+Input:
+2 
+3
+Expected Output
+2
+2
+2
+
+program:
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner S=new Scanner(System.in);
+	    int x=S.nextInt();
+	  	int y=S.nextInt();
+	  	for(int i=0;i<y;i++){
+	  	    System.out.println(x);
+	  	}
+
+	}
+}
+
+
+
+Prob 2:
+
+Write a program to take x and print multiples of x till 1000.
+
+Input:
+
+100
+
+Expected Output:
+
+100
+
+200
+
+300
+
+400
+
+500
+
+600
+
+700
+
+800
+
+900
+
+1000
+
+program:
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner S=new Scanner(System.in);
+	    System.out.print("Enter the value of x:");
+	    int x=S.nextInt();
+	  	for(int i=x;i<=1000;i=i+x){
+	  	    System.out.println(i);
+	  	}
+
+	}
+}
+
+Prob 3:
+
+Write a program to get firstName and lastName and n as input and print fullName that is firstName+lastName for n times.
+
+Input
+
+Nandy
+
+Raja
+
+5
+
+Expected output:
+
+NandyRaja
+
+NandyRaja
+
+NandyRaja
+
+NandyRaja
+
+NandyRaja
+
+program:
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	   Scanner S=new Scanner(System.in);
+	   System.out.print("Enter the Firstname:");
+	   String firstname=S.nextLine();
+	   System.out.print("Enter the Lastname:");
+	   String lastname=S.nextLine();
+	   System.out.print("Enter the value x:");
+	   int x=S.nextInt();
+	   for(int i=0;i<x;i++){
+	       System.out.println(firstname+lastname);
+	   }
+
+	}
+}
+
