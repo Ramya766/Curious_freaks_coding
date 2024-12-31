@@ -1,0 +1,38 @@
+Write a program that gets n as input and print the reverse of the number
+
+Testcase 1 :
+
+Input : 
+
+325345
+
+Expected output:
+
+543523
+
+
+
+Testcase 2 :
+
+Input : 
+
+987987
+
+Expected output:
+
+789789
+
+
+program:
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner S=new Scanner(System.in);
+        int n=S.nextInt();
+        while(n>0){
+            int ld=n%10;
+            n=n/10;
+            System.out.print(ld);
+        }
+    }
+}
