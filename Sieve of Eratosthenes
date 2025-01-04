@@ -1,0 +1,74 @@
+Write a program that gets n as input and print all the prime numbers till that number.
+
+Testcase 1 :
+Input : 
+5
+Expected output:
+2 3 5
+
+Testcase 2 :
+Input : 
+11
+Expected output:
+2 3 5 7 11
+
+
+program:
+import java.util.Scanner;
+import java.lang.Math;
+public class Main{
+    public static void main(String[] args){
+        Scanner S=new Scanner(System.in);
+        int n=S.nextInt();
+        int[] prime=new int[n+1];
+        for(int i=2;i<=n;i++){
+            prime[i]=1;
+        }
+        for(int i=2;i<=(int) Math.sqrt(n);i++){
+            if(prime[i]==1){
+                for(int j=2*i;j<=n;j+=i){
+                    prime[j]=0;
+                }
+            }
+       
+        }
+             
+            for( int i=2;i<=n;i++){
+                if(prime[i]==1){
+                System.out.print(i+" ");
+            }
+        }
+       
+        
+    }
+}
+
+2.
+class Solution{
+    static ArrayList<Integer> sieveOfEratosthenes(int N){
+        boolean[] isprime=new boolean[N+1];
+        for(int i=2;i<=N;i++){
+            isprime[i]=true;
+        }
+        for(int i=2;i<=(int) Math.sqrt(N);i++){
+            if(isprime[i]){
+                for(int j=2*i;j<=N;j+=i){
+                    isprime[j]=false;
+                }
+            }
+        }
+     
+      
+        
+        ArrayList <Integer> prime=new ArrayList<>();
+        for(int i=2;i<=N;i++){
+        if(isprime[i]){
+            prime.add(i);
+        }
+        }
+        
+        return prime;
+        
+       
+    }
+}
