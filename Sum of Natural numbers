@@ -1,0 +1,17 @@
+Given an integer n, your task is to compute the sum of all natural numbers from 1 to n (inclusive). If n is 0, the sum should be 0.
+
+Examples:
+Input: n = 1
+Output: 1
+Explanation: For n = 1, the sum will be 1.
+
+program:
+class Solution {
+    public static int seriesSum(int n) {
+        int sum=0;
+        for(int i=1;i<=n;i++){
+            sum=sum+i;
+        }
+        return sum;
+    }
+}
