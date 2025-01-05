@@ -1,0 +1,25 @@
+Given an integer N, find the absolute difference between sum of the squares of first N natural numbers and square of sum of first N natural numbers.
+
+Example 1:
+
+Input: N = 2
+Output: 4 
+Explanation: abs|(12 + 22) - (1 + 2)2| = 4.
+
+program:
+class Solution {
+    static long squaresDiff(int N){
+        long sum=0;
+        long sum1=0;
+        for(int i=1;i<=N;i++){
+            sum=sum+(long) i*i;
+        }
+        for(int i=1;i<=N;i++){
+            sum1=sum1+i;
+        }
+        long pro=sum1*sum1;
+        long res=Math.abs(sum-pro);
+        return res;
+        
+    }
+}
