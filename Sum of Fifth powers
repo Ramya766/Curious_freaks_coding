@@ -1,0 +1,23 @@
+Given a number N.Find the sum of fifth powers of natural numbers till N i.e. 15+25+35+..+N5.
+
+Example 1:
+
+Input:
+N=2
+Output:
+33
+Explanation:
+The sum is calculated as 15+25=1+32=33.
+
+program:
+class Solution {
+    long sumOfFifthPowers(int n) {
+        
+      long sum=0;
+        for(int i=1;i<=n;i++){
+            sum=sum+ (long) Math.pow(i,5);
+        }
+      
+        return sum;
+    }
+}
