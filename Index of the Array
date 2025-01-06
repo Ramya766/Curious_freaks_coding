@@ -1,0 +1,25 @@
+Given an array arr of integers and an index key(0-based index). Your task is to return the element present at the index key in the array.
+
+Input: key = 2 , arr = [10, 20, 30, 40, 50]
+Output: 30
+Explanation: The value of arr[2] is 30 .
+
+Program:
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner S=new Scanner(System.in);
+        int n=S.nextInt();
+        int key=S.nextInt();
+        int flag=-1;
+        int [] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=S.nextInt();
+        }
+        for(int i=0;i<n;i++){
+            if(i==key){
+                System.out.println(arr[i]);
+            }
+        }
+    }
+}
