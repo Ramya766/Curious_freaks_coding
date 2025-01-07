@@ -1,0 +1,39 @@
+Write a recursive algorithm to find the count of digits in a number.
+
+Example:
+Input: 353445
+
+Outpput: 6
+
+Example 2 :
+
+Input: 53543
+
+Output: 5
+
+
+Program:
+import java.util.Scanner;
+public class Main{
+public static int count(int n){
+    if(n%10==n){
+       return 1;
+    }
+    return 1+count(n/10);
+    
+    
+    
+}
+
+    public static void main(String[] args){
+        Scanner S=new Scanner(System.in);
+        int n=S.nextInt();
+        count(n);
+        int res=count(n);
+        System.out.print(res);
+        
+        
+        
+        
+    }
+}
