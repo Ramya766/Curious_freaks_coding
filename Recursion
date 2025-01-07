@@ -1,0 +1,57 @@
+Qn:
+n=5
+1 2 3 4 5
+
+import java.util.Scanner;
+public class Main{
+public static void Function(int n){
+    if(n==0){
+        return;
+    }
+    else{
+         Function(n-1);
+        System.out.print(n);
+       
+    }
+}
+
+    public static void main(String[] args){
+        Scanner S=new Scanner(System.in);
+        int n=S.nextInt();
+        Function(n);
+        
+        
+        
+        
+    }
+}
+
+
+2. Qn:
+n=5
+5 4 3 2 1
+
+Program:
+import java.util.Scanner;
+public class Main{
+public static void Function(int n){
+    if(n==0){
+        return;
+    }
+    else{
+        System.out.print(n);
+           Function(n-1);
+       
+    }
+}
+
+    public static void main(String[] args){
+        Scanner S=new Scanner(System.in);
+        int n=S.nextInt();
+        Function(n);
+        
+        
+        
+        
+    }
+}
