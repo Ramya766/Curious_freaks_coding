@@ -1,0 +1,19 @@
+public class Main{
+    public static int Search(int a[],int n,int i,int target){
+        if(i>=n){
+            return -1 ;
+        }
+       if(target==a[i]){
+           return i;
+       }
+       else{
+           return Search(a,n,i+1,target);
+       }
+    }
+    public static void main(String[] args){
+        int [] a={8,2,9,4,10};
+        int res=Search(a,5,0,2);
+        System.out.print(res);
+        
+    }
+}
