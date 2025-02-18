@@ -1,0 +1,47 @@
+Given a singly linked list. The task is to find the length of the linked list, where length is defined as the number of nodes in the linked list.
+
+program:(gfg)
+
+class Solution {
+    // Function to count nodes of a linked list.
+    public int getCount(Node head) {
+        int count=0;
+        Node temp=head;
+        while(temp!=null){
+            count++;
+            temp=temp.next;
+        }
+        return count;
+    }
+}
+
+
+My program:
+public class Main{
+    static class Node{
+        int data;
+        Node next;
+    }
+    public static void main(String[] args){
+        int count=0;
+        Node head=new Node(),second=new Node(),Third=new Node(),Fourth=new Node(), Fifth=new Node();
+        head.data=1;head.next=second;
+        second.data=2;second.next=Third;
+        Third.data=3;Third.next=Fourth;
+        Fourth.data=4;Fourth.next=Fifth;
+        Fifth.data=5;Fifth.next=null;
+        Node temp=head;
+        while(temp!=null){
+            count++;
+            temp=temp.next;
+            
+            
+        }
+        System.out.print(count);
+       
+        
+        
+    }
+}
+
+
