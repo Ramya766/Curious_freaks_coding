@@ -1,0 +1,31 @@
+You are given a string s, and your task is to reverse the string.
+
+Examples:
+
+Input: s = "Geeks"
+Output: "skeeG"
+Input: s = "for"
+Output: "rof"
+Input: s = "a"
+Output: "a"
+
+Program:
+class Solution {
+    public static String reverseString(String s) {
+        char[] charArr=s.toCharArray();
+        int i=0;
+        int j=s.length()-1;
+        char temp;
+        while(i<=j){
+            temp=charArr[i];
+            charArr[i]=charArr[j];
+            charArr[j]=temp;
+            i++;
+            j--;
+        }
+        // Convert char array back to a string
+        return new String(charArr);
+        
+        
+    }
+}
